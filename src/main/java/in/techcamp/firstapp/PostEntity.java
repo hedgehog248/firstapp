@@ -1,31 +1,15 @@
 package in.techcamp.firstapp;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+// @AllArgsConstructor => すべての変数を初期化するコンストラクタを自動生成するアノテーション
+// @Data => ゲッターとセッターを自動生成するアノテーション
+@AllArgsConstructor
+@Data
 public class PostEntity {
     //変数としてidとmemoを宣言
 
     private long id;
     private String memo;
-
-    // すべての変数を初期化するコンストラクタ
-    public PostEntity(long id, String memo) {
-        this.id = id;
-        this.memo = memo;
-    }
-
-    // 各変数のゲッターとセッター
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getMemo() {
-        return memo;
-    }
-
-    public void setMemo(String memo) {
-        this.memo = memo;
-    }
 }
